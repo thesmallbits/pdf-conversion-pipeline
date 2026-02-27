@@ -1,0 +1,30 @@
+[project]
+name = "pdf-conversion-pipeline"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "d1vij", email = "verma.divij@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pypdf>=6.7.4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/thesmallbits/pdf-conversion-pipeline"
+"Bug Reports" = "https://github.com/thesmallbits/pdf-conversion-pipeline"
+"Source" = "https://github.com/thesmallbits/pdf-conversion-pipeline"
+
+[project.scripts]
+pdf-conversion-pipeline = "pdf_conversion_pipeline:main"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.4",
+]
