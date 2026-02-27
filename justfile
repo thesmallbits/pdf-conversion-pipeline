@@ -5,7 +5,7 @@ default:
 
 # run pytest in tests/ directory
 test *args="tests/":
-    uv run pytest {{args}}
+    uv run pytest --log-cli-level=INFO {{args}}
 
 # format using ruff
 format:

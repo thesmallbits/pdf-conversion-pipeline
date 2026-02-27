@@ -126,6 +126,12 @@ The compiled Question, Option and Image json along with some metadata (like crea
 
 ---
 
+- To bypass hardware bottleneck on certain pages, what we can do is process all pages on a single thread GPU and the failed ones get sent to cpu based pipeline.
+- In CUDA (GPU) conversion, the ram usage is negligible and only a single thread is utilized, whilist consuming all available (5GB) of VRAM. Conversion takes about 10s/page ?? (30s for 2/4 to fail so yeah)
+- In CPU conversion, the ram usage is also kinda negligible (2-3gigs tops\*\*) and all available threads get utilized in conversion. the conversion takes about 7-8 mins/ page
+
+---
+
 ## Notes
 
 - The `text_from_rendered` function takes the Render Object returned by the `PdfConverter` and it always returns values

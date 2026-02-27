@@ -4,7 +4,6 @@ from PIL.Image import Image
 from pathlib import Path
 
 
-
 def convert_to_base64(images: dict[str, Image]) -> dict[str, str]:
     converted = {}
 
